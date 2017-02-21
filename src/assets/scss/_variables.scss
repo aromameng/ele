@@ -1,0 +1,60 @@
+@charset "UTF-8";
+//-----------------------------------------------------
+// setting scss
+//-----------------------------------------------------
+// font相关
+//-----------------------------------------------------
+$baseSize: 28px !default;
+$baseLineHeight: 1.5 !default;
+$baseFont: "Helvetica Neue",
+Helvetica,
+STHeiTi,
+Arial,
+sans-serif !default;
+// 元素上下间距
+//-----------------------------------------------------
+$baseGap: 20px;
+// header,footer等的高度
+//-----------------------------------------------------
+$phoneTop: 40px;
+$topTitleHeight: 88px;
+$topHeight: $phoneTop + $topTitleHeight;
+$bottomNavHeight: 104px;
+//----------------------color------------------------
+// 灰色调
+$black: black !default;
+$grayDark: #4a4a4a !default;
+$gray: #9b9b9b !default;
+$lightGray: #f7f7f7 !default;
+$grayLight: #d8d8d8 !default;
+$white: white !default;
+// 主色调-蓝色
+$primary: #02b0f0 !default;
+$primaryLight: #bde6f5 !default;
+;
+//辅色调-绿色
+$info: #7ed321 !default;
+//反色调-黄色
+$warn: #ee6d52 !default;
+// link
+$linkColor: #02b0f0 !default;
+// scaffolding
+//-----------------------------------------------------
+$bgColor: #eff2f2 !default;
+$bgColor2: #ffffff !default;
+$textColor: #4a4a4a !default;
+$borderColor: #dfdee3 !default;
+// placeholder
+//-----------------------------------------------------
+// 变量分别为：是否输出表单的占位符placeholder样式，文本色
+$placeholder: true $gray !default;
+// radius
+//-----------------------------------------------------
+$radiusBase: 10px !default;
+
+//-----------------------------------------------------
+$fontX: 24px !default;
+$fontS: 26px !default;
+$fontM: 30px !default;
+$fontML: 32px !default;
+$fontL: 34px !default;
