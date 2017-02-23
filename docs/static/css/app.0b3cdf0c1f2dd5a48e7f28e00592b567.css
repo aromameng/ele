@@ -1469,6 +1469,7 @@ input[type="number"] {
   right: 0;
   bottom: 0;
   transform: translateZ(0);
+  background: #fff;
 }
 .view > * {
     -ms-flex: none;
@@ -1648,6 +1649,14 @@ input[type="number"] {
     -webkit-border-radius: 0.35714rem;
     -moz-border-radius: 0.35714rem;
 }
+.slideLeft-leave-active,
+.slideOutLeft {
+  animation-name: slideOutRight;
+}
+.slideRight-leave-active,
+.slideInRight {
+  animation-name: slideOutLeft;
+}
 .page-news .view-content {
   padding: 0 1.07143rem;
 }
@@ -1744,4 +1753,4 @@ a[data-v-2db87fb8] {
   font-size: px2rem(14px);
 }
 
-/*# sourceMappingURL=app.286967751b3690cc75242e0d5cd605ce.css.map*/
+/*# sourceMappingURL=app.0b3cdf0c1f2dd5a48e7f28e00592b567.css.map*/

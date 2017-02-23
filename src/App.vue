@@ -43,7 +43,6 @@ export default {
       if(len>2){
         this.transName = 'slideRight';
       }
-
     })
   },
   methods: {
