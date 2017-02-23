@@ -1,41 +1,28 @@
 <template>
-  <div class="newsview">
+  <div class="newsview page-news-view">
+    <c-head></c-head>
     <div class="view-content">
-      {{content}}
+      <h3 class="title">{{topic.title}}</h3>
+      <p class="time">发布于：{{topic.create_at |　dateFormat}}</p>
+      <hr>
+      <div class="main" v-html="topic.content"></div>
+      <div class="no-data" v-if="noData">没有相关内容！</div>
     </div>
   </div>
 </template>
 <script>
+import $ from 'webpack-zepto';
 
 export default {
-
   //==数据配置===
   data() {
       return {
         id: '',
         title: '',
         content: '',
-        items: [{
-          id: 1,
-          title: '基本用法',
-          content: '电话好多好多好多好多好多好多大家觉得'
-        }, {
-          id: 2,
-          title: '路由配置项',
-          content: 'dfag地方放顶顶顶顶顶'
-        }, {
-          id: 3,
-          title: '路由实例属性',
-          content: '在嵌套的代码块内，可以使用&引用父元素。比如a:hover伪类，可以写成：'
-        }, {
-          id: 4,
-          title: '路由对象与路由匹配',
-          content: 'mixin的强大之处，在于可以指定参数和缺省值。'
-        }, {
-          id: 5,
-          title: '动态组件载入',
-          content: 'SASS提供了一些内置的颜色函数，以便生成系列颜色。'
-        }]
+        topicId:'',
+        noData:false,
+        topic:''
       }
     },
     computed: {
@@ -43,15 +30,21 @@ export default {
     },
     created() {
       var _this = this;
-      this.id = this.$route.params.id;
-      this.items.forEach(function(item, i) {
-          if (_this.id == i+1) {
-            _this.content = item.content;
-          }
-        })
+      // 获取url传的id参数
+      this.topicId = this.$route.params.id;
+      this.getData();
     },
     methods: {
-
+       getData(){
+          // 加载主题数据
+          $.get('https://cnodejs.org/api/v1/topic/' + this.topicId, (d) => {
+              if (d && d.data) {
+                  this.topic = d.data;
+              } else {
+                  this.noData = true;
+              }
+          });
+       }
     },
 }
 </script>

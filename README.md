@@ -1,8 +1,10 @@
-# vue2-test
+## vue2.0版本学习，主框架仿饿了么招聘网 <https://jobs-mobile.ele.me/#!/>
+
+新闻页接口用的是<https://cnodejs.org>，同时参考了很多<https://github.com/shinygang/Vue-cnodejs>项目的内容 
 
 > A Vue.js project
 
-## Build Setup
+### Build Setup
 
 ``` bash
 # install dependencies
@@ -17,5 +19,3 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

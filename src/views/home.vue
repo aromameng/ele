@@ -1,12 +1,16 @@
 <template>
   <div class="hello">
-    <div class="home-img">
-  		<img src="../assets/img/campus-home.png">
-  	</div>
+    <c-head></c-head>
+    <div class="view-content">
+      <div class="home-img">
+    		<img src="../assets/img/campus-home.png">
+    	</div>
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
   data () {
     return {
@@ -14,6 +18,9 @@ export default {
     }
   },
   created(){
+
+  },
+  components: {
 
   }
 }

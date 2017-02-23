@@ -1,9 +1,12 @@
 <template>
   <div class="aboutview">
+    <c-head></c-head>
     <div class="nav">
       <span v-for="(item,index) of items" :class="{'active': tabIndex===index}" @click="tab(index)">{{item.title}}</span>
     </div>
-    <div class="nav-content" v-html="article"></div>
+    <div class="view-content">
+      <div class="nav-content" v-html="article"></div>
+    </div>
   </div>
 </template>
 <script>

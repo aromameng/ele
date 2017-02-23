@@ -1,0 +1,74 @@
+// 新闻页
+.page-news{
+  .view-content{
+    padding: 0 px2rem(30px);
+  }
+  .newsList{
+    &>li{
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+      line-height: px2rem(50px);
+      .title{
+        display: table-cell;
+        width: 75%;
+        text-align: left;
+        @extend %ellipsis;
+        color: $info;
+      }
+      .date{
+        width: 25%;
+        display: table-cell;
+        text-align: right;
+        color: $gray;
+      }
+    }
+  }
+}
+// 新闻详情页
+.page-news-view{
+  .view-content{
+    padding: px2rem(30px);
+    text-align: left;
+  }
+  .title{
+    font-size: px2rem($fontL);
+  }
+  .main{
+    padding-top: px2rem(30px);
+  }
+}
+
+// 关于我们页面
+.aboutview{
+  .nav{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      background-color: #eee;
+      height: 40px;
+      width: 100%;
+  }
+  .nav span{
+      font-size: 16px;
+      color: #333;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      text-align: center;
+      line-height: 40px;
+  }
+  .nav .active, .nav .v-link-active{
+      color: #26a2ff;
+      border-bottom: 2px solid #26a2ff;
+  }
+  .nav-content{
+    @extend %clearfix;
+  	padding: 10px 3%;
+  }
+}

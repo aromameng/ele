@@ -4,7 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './vuex/user';
-import Toast from './assets/js/toast'
+import filters from './filters';
+import components from './components';
+import Toast from './assets/js/toast';
 
 Vue.use(Toast);
 

@@ -26,8 +26,8 @@ export default new Router({
       name: 'about',
       component: about,
       meta:{
-        back:true,
-        menu:true
+        menu:true,
+        title:'关于我们'
       }
     },
     {
@@ -35,8 +35,8 @@ export default new Router({
       name: 'news',
       component: news,
       meta:{
-        back:true,
-        menu:true
+        menu:true,
+        title:'新闻'
       }
     },
     {
