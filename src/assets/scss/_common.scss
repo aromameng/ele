@@ -12,6 +12,7 @@
   right: 0;
   bottom: 0;
   transform: translateZ(0);
+	background: #fff;
   & > * {
     flex: none;
   }
@@ -191,4 +192,12 @@
         color: $white;
         @include radius(px2rem(10px));
     }
+}
+.slideLeft-leave-active,
+.slideOutLeft {
+  animation-name: slideOutRight;
+}
+.slideRight-leave-active,
+.slideInRight {
+  animation-name: slideOutLeft;
 }

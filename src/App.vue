@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <div class="container">
-      <transition name="fadeIn">
+      <transition :name="transName">
         <router-view class="view"></router-view>
       </transition>
     </div>
     <menulist :is-show="menuStatus"></menulist>
+    <!-- 页面切换遮罩，防止切换中点击页面空白的bug -->
+    <div class="view-cover" :class="{open:isCover}"></div>
   </div>
 </template>
 
@@ -18,7 +20,8 @@ import {
 export default {
   data() {
     return {
-
+      transName:'slideLeft',
+      isCover:false
     }
   },
   computed: {
@@ -27,7 +30,21 @@ export default {
     })
   },
   created(){
+    this.$router.beforeEach((to, from, next) => {
+       let len=to.path.split('/').length;
+       if(len>2){
+         this.transName = 'slideRight';
+       }
+       next();
+    })
+    this.$router.afterEach((to,from) => {
+      let len=to.path.split('/').length;
+      this.transName = 'slideLeft';
+      if(len>2){
+        this.transName = 'slideRight';
+      }
 
+    })
   },
   methods: {
     go(route){
