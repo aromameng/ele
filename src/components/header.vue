@@ -35,7 +35,7 @@ export default {
     })
   },
   created(){
-    console.log(this.$route.title)
+  //  console.log(this.$route.title)
   },
   methods: {
     back: function() {
