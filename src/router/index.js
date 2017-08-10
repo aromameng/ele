@@ -6,45 +6,54 @@ import home from 'views/home'
 import about from 'views/about'
 import news from 'views/news'
 import newsView from 'views/newsView'
+import test from 'views/test'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: home,
-      meta:{
-        back:false,
-        menu:true,
-        logo:true
+      meta: {
+        back: false,
+        menu: true,
+        logo: true
       }
     },
     {
       path: '/about',
       name: 'about',
       component: about,
-      meta:{
-        menu:true,
-        title:'关于我们'
+      meta: {
+        menu: true,
+        title: '关于我们'
       }
     },
     {
       path: '/news',
       name: 'news',
       component: news,
-      meta:{
-        menu:true,
-        title:'新闻'
+      meta: {
+        menu: true,
+        title: '新闻'
       }
     },
     {
       path: '/news/view/:id',
       name: 'newsView',
       component: newsView,
-      meta:{
-        back:true
+      meta: {
+        back: true
+      }
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: test,
+      meta: {
+        menu: true,
+        title: '产品'
       }
     }
   ]

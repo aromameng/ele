@@ -5,10 +5,13 @@ import App from './App'
 import router from './router'
 import store from './vuex/user';
 import filters from './filters';
+import directives from './directives';
 import components from './components';
 import Toast from './assets/js/toast';
 
 Vue.use(Toast);
+
+console.log(router)
 
 /* eslint-disable no-new */
 new Vue({

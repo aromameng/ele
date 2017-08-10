@@ -39,6 +39,12 @@ export default {
       //  this.article = this.items[0].content;
       }
     },
+    beforeRouteEnter(to, from, next){
+      next();
+    },
+    beforeRouteLeave(to, from, next){
+      next();
+    },
     methods: {
       tab(_index) {
         this.tabIndex = _index;
